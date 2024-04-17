@@ -1,0 +1,34 @@
+@use "sass:map"
+
+@font-face 
+    font-family: 'outfit'
+    src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf')
+    font-weight: 100 900
+
+@font-face
+    font-family: 'youngSerif'
+    src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf')
+
+$font-title: 'youngSerif'
+$font-text: 'outfit'
+$primary-color: #975726
+$secondary-color: #4c482d
+$background-color: #f3e5d8
+$accent-color: #eb5e28
+
+$padding-phone: 0px 20px 0 20px
+$padding-small: 8px
+$padding-regular: 16px
+$padding-large: 32px
+
+$border-radius: 4px
+
+$breakpoints: (phone: 425px)
+
+@mixin respond-to($breakpoint) 
+  @if map-has-key($breakpoints, $breakpoint) 
+    $breakpoint-value: map-get($breakpoints, $breakpoint)
+    @media (max-width: $breakpoint-value) 
+      @content
+  @else 
+      @warn "The breakpoint `#{$breakpoint}` is not defined."
