@@ -1,0 +1,35 @@
+@import '_variables.sass'
+
+body
+  font-family: $font-text
+  color: $secondary-color
+  background-color: $background-color
+  line-height: 1.6
+  margin: 0
+  @include respond-to(phone)
+        background-color: #ffffff
+
+html, body
+  overflow-x: hidden
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font-title
+  color: $primary-color
+
+img
+  max-width: 100%
+  height: auto
+
+ul, ol
+  padding-inline-start: 0px
+  margin-inline-start: 20px
+  display: flex
+  gap: 10px
+  flex-direction: column
+
+li span 
+  position: relative
+  left: 10px
+
+li::marker
+  color: $primary-color
