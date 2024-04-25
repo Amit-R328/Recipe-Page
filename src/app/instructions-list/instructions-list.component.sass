@@ -1,0 +1,22 @@
+@import '../../_variables.sass'
+
+h2
+    @include respond-to(phone)
+        margin-left: 20px
+
+ol
+   @include respond-to(phone)
+        padding: $padding-phone
+        width: 24ch
+
+
+hr
+    display: block
+    height: 1px
+    border: 0
+    border-top: 1px solid #e2e2e2
+    margin: 2em 0
+    padding: 0
+    @include respond-to(phone)
+        width:90%
+        margin: 2em 20px
